@@ -12,9 +12,7 @@ public class Student {
     @Id
     @Column(name = "idStudent")
     private int id;
-    @Basic
     private String name;
-    @Basic
     private int age;
 
     @ManyToMany(cascade = CascadeType.PERSIST)

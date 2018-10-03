@@ -1,6 +1,5 @@
 package com.example.pasha.JPAdemo;
 
-import com.example.pasha.JPAdemo.model.Class;
 import com.example.pasha.JPAdemo.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -25,6 +24,6 @@ public class StudentController {
     }
     @RequestMapping("/class{id}")
     public List<Student> getStudentClasses(@PathVariable("id") String id){
-        return studentRepository.findAllByClassesId(Integer.valueOf(id));
+        return studentRepository.findByClassesId(Integer.valueOf(id));
     }
 }

@@ -12,7 +12,6 @@ public class Class {
     @Id
     @Column(name = "idClass")
     private int id;
-    @Basic
     private String name;
 
     @ManyToMany(mappedBy = "classes", cascade = CascadeType.PERSIST)
